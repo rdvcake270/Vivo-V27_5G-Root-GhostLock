@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">iQOO Z9 5G Jailbreak Root — GhostLock</string>
+    <string name="nav_overview">Home</string>
+    <string name="nav_history">History</string>
+    <string name="nav_settings">Settings</string>
+    <string name="install_confirm_title">Install KernelSU?</string>
+    <string name="install_confirm_body">The app will verify this iQOO Z9 5G, download the device-specific CVE-2026-43499 payload from GitHub, then load the matching KernelSU daemon.</string>
+    <string name="action_confirm">Confirm</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_close">Close</string>
+    <string name="action_retry">Try again</string>
+    <string name="action_done">Done</string>
+    <string name="action_back">Back</string>
+    <string name="action_delete">Delete</string>
+    <string name="install_ksu_running">KernelSU module is running</string>
+    <string name="kernelsu_manager_required">Required KernelSU Manager</string>
+    <string name="kernelsu_manager_open">Tap to open its download page</string><string name="kernelsu_manager_custom_required">This build needs its own KernelSU Manager</string><string name="kernelsu_manager_custom_replace">Signed and named differently from the official manager, which this build does not accept. Both can be installed.</string>
+    <string name="install_tap_retry">Tap to try again</string>
+    <string name="install_tap_start">Tap to install KernelSU</string>
+    <string name="device">Device</string>
+    <string name="firmware">Firmware</string>
+    <string name="os_version">OS version</string>
+    <string name="kernel">Kernel</string>
+    <string name="system">System</string>
+    <string name="system_abi">System ABI</string>
+    <string name="settings">Settings</string>
+    <string name="privilege" translatable="false">Execution privilege</string>
+    <string name="shizuku_mode" translatable="false">Use Shizuku (required)</string>
+    <string name="shizuku_mode_description" translatable="false">Required for a working install. Direct APK mode is retained for diagnostics only and does not work yet.</string>
+    <string name="shizuku_not_running_title" translatable="false">Shizuku is not running</string>
+    <string name="shizuku_not_running_body" translatable="false">Start Shizuku through Wireless debugging or adb, grant this app permission, then enable this option again.</string>
+    <string name="shizuku_disable_title" translatable="false">Disable required Shizuku mode?</string>
+    <string name="shizuku_disable_body" translatable="false">Without Shizuku the APK runs as untrusted_app and cannot access tracefs. Direct mode is not working on this device yet, so installation will be refused until Shizuku is enabled again.</string>
+    <string name="action_download_shizuku" translatable="false">Open Shizuku releases</string>
+    <string name="action_disable_anyway" translatable="false">Disable anyway</string>
+    <string name="action_keep_shizuku" translatable="false">Keep Shizuku enabled</string>
+    <string name="version_format">%1$s (%2$d)</string>
+    <string name="language">Language</string>
+    <string name="language_description">Choose the app language</string>
+    <string name="appearance">Appearance</string>
+    <string name="theme_system">System</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="material_color">Material color</string>
+    <string name="material_color_description">Choose the interface accent palette</string>
+    <string name="language_system">Follow system</string>
+    <string name="language_korean" translatable="false">한국어</string>
+    <string name="language_english" translatable="false">English</string>
+    <string name="language_japanese" translatable="false">日本語</string>
+    <string name="language_chinese" translatable="false">简体中文</string>
+    <string name="color_dynamic">System dynamic</string>
+    <string name="color_blue">Blue</string>
+    <string name="color_violet">Violet</string>
+    <string name="color_green">Green</string>
+    <string name="color_orange">Orange</string>
+    <string name="history_title">Run history</string>
+    <string name="history_empty_title">No runs yet</string>
+    <string name="history_empty_description">Installation results and logs will appear here.</string>
+    <string name="history_running">Running</string>
+    <string name="history_succeeded">Succeeded</string>
+    <string name="history_failed">Failed</string><string name="history_skipped">Skipped</string>
+    <string name="history_detail_title">Run details</string>
+    <string name="history_started">Started: %1$s</string>
+    <string name="history_completed">Completed: %1$s</string>
+    <string name="history_log">Execution log</string>
+    <string name="history_log_empty">No log output yet.</string>
+    <string name="history_clear_title">Clear run history?</string>
+    <string name="history_clear_body">Every saved run and its execution log will be deleted from this device.</string>
+    <string name="history_delete_title">Delete this run?</string>
+    <string name="history_delete_body">This run and its execution log will be deleted from this device.</string>
+    <string name="history_payload">Payload: %1$s</string>
+
+    <string name="payload_release">Payload release</string>
+    <string name="payload_current">This is the release published now.</string>
+    <string name="payload_unchecked">Could not check whether a newer release is published.</string>
+    <string name="payload_outdated">A newer release is published: %1$s</string>
+    <string name="payload_fetching">Fetching…</string>
+    <string name="payload_fetched">Fetched %1$s. The next run resolves the release again.</string>
+    <string name="action_force_fetch">Force fetch</string>
+    <string name="log_payload_release">[+] Payload release: %1$s</string>
+    <string name="log_payload_newer">[!] A newer payload release is published: %1$s</string>
+    <string name="log_payload_check_failed">[!] Could not check for a newer payload release</string>
+    <string name="log_payload_fetching">[*] Force-fetching payload release %1$s</string>
+    <string name="log_payload_fetched">[+] Payload release %1$s fetched</string>
+
+    <string name="install_title">Install</string>
+    <string name="install_keep_open">Keep this screen open until installation finishes</string>
+    <string name="install_keep_alive_notification">Installation is running; the app is keeping the controller alive.</string>
+    <string name="install_keep_alive_channel">Installation progress</string>
+    <string name="install_keep_alive_channel_description">Shown while the long-running device installation is active.</string>
+    <string name="install_live_progress">Log</string>
+    <string name="install_preparing">Preparing…</string>
+    <string name="step_support_title">Support check</string>
+    <string name="step_support_detail">Verify device and firmware profile</string>
+    <string name="step_download_title">Download</string>
+    <string name="step_download_detail">Load the support manifest</string>
+    <string name="step_exploit_title">Kernel exploit</string>
+    <string name="step_exploit_detail">Acquire bootstrap root</string>
+    <string name="step_ksu_title">Load KernelSU</string>
+    <string name="step_ksu_detail">Late-load module and verify control channel</string>
+    <string name="phase_checking">Checking the supported device and firmware</string>
+    <string name="phase_ready">Ready to install</string>
+    <string name="phase_downloading">Downloading the iQOO payload from GitHub</string>
+    <string name="phase_exploiting">This may take 10 minutes or longer. Your device may become hot or stop responding.</string>
+    <string name="phase_loading_ksu">Loading KernelSU with the acquired bootstrap root</string>
+    <string name="phase_installed">KernelSU module and control channel verified</string>
+    <string name="phase_failed">Review the failure point in the log below</string><string name="phase_skipped">Restart the device, then run once</string>
+
+    <string name="status_ksu_active">KernelSU active</string>
+    <string name="status_not_installed">Not installed</string>
+    <string name="status_support_failed">Support check failed</string>
+    <string name="status_checking_github">Checking the iQOO payload release on GitHub</string>
+    <string name="status_downloading_payload">Downloading payloads from GitHub</string>
+    <string name="status_exploit_running">Running kernel exploit</string>
+    <string name="status_ksu_loading">Late-loading KernelSU</string>
+    <string name="status_install_failed">Installation failed</string><string name="status_install_skipped">Skipped — a reboot is needed first</string>
+    <string name="log_profile">[+] Support profile: %1$s</string>
+    <string name="log_download_verified">[+] Payload download complete</string>
+    <string name="log_install_complete">[+] Installation complete</string>
+    <string name="log_bootstrap_root">[+] Bootstrap root acquired</string>
+    <string name="log_ksu_staged">[+] KernelSU staging complete</string>
+    <string name="log_ksu_control_verified">[+] KernelSU control channel verified</string>
+    <string name="error_helper_unavailable">The bootstrap helper is not executable</string>
+    <string name="error_shizuku_unavailable" translatable="false">Shizuku is not running. Start it before installing.</string>
+    <string name="error_shizuku_permission" translatable="false">Shizuku permission was not granted</string>
+    <string name="error_shizuku_required" translatable="false">Shizuku is required for a working install. Enable it in Settings first.</string>
+    <string name="error_shizuku_stage" translatable="false">Unable to stage %1$s through Shizuku: %2$s</string>
+    <string name="log_shizuku_prepare" translatable="false">[*] Preparing shell-context execution through Shizuku</string>
+    <string name="log_shizuku_permission" translatable="false">[+] Shizuku permission granted</string>
+    <string name="log_idle_whitelist_request" translatable="false">[*] Requesting Android idle whitelist through Shizuku</string>
+    <string name="log_idle_whitelist_success" translatable="false">[+] Android idle whitelist enabled for this app</string>
+    <string name="log_shizuku_required" translatable="false">[!] Shizuku is disabled; direct APK mode is unsupported and this run will stop.</string>
+    <string name="error_exploit_stalled">The exploit log did not advance for 90 seconds</string>
+    <string name="error_exploit_timeout">The exploit exceeded the 15-minute limit</string>
+    <string name="error_payload_exit">Payload execution failed: %1$d%2$s</string>
+    <string name="error_success_marker">Exploit success markers were not found</string><string name="error_leak_channel_pinned">This boot has already been rooted once, and the kernel-base leak cannot run again until you reboot. Restart the device and try once.</string>
+    <string name="error_ksu_stage">KernelSU staging failed: %1$s</string>
+    <string name="error_ksu_verify">KernelSU late-load or control verification failed (rc=%1$d): %2$s</string>
+    <string name="error_boot_id">Unable to read the current boot_id</string>
+    <string name="error_receipt">Unable to save the installation verification receipt</string>
+
+    <string name="artifact_exploit">exploit</string>
+    <string name="artifact_kernelsu">KernelSU</string>
+    <string name="repo_no_profile">No support profile exactly matches this firmware</string>
+    <string name="repo_downloading">Downloading %1$s</string>
+    <string name="repo_size_mismatch">%1$s size does not match the support manifest</string>
+    <string name="repo_size_exceeded">%1$s exceeded the declared size</string>
+    <string name="repo_incomplete">%1$s download is incomplete</string>
+    <string name="repo_finalize_failed">Unable to finalize %1$s</string>
+    
+    <string name="repo_verified">%1$s verified</string>
+    <string name="repo_release_invalid">GitHub returned an invalid or changed payload release</string>
+    <string name="repo_feed_missing">The payload release has no %1$s asset</string>
+    <string name="repo_url_invalid">The artifact repository is not allowed</string>
+    <string name="repo_response_too_large">The response exceeded its size limit</string>
+    <string name="open_github">Open GitHub</string>
+    <string name="github_card_title">iQOO Z9 5G Jailbreak Root source</string>
+    <string name="github_card_description">Device-specific CVE-2026-43499 port and KernelSU bootstrap.</string>
+    <string name="action_continue">Continue anyway</string>
+    <string name="action_next">Next</string>
+    <string name="advanced">Advanced</string>
+    <string name="advanced_mode">Advanced mode</string>
+    <string name="advanced_mode_description">Manually choose a kernel and firmware profile during installation</string>
+    <string name="about">About</string>
+    <string name="fork_notice">Project source and release information.</string>
+    <string name="fork_upstream_app">Project source</string>
+    <string name="fork_upstream_app_description">Source code and release information</string>
+    <string name="fork_upstream_payloads">Payload source</string>
+    <string name="fork_upstream_payloads_description">The device-specific native payload source</string>
+    <string name="repo_profile_missing">Support profile %1$s is no longer available</string>
+    <string name="select_device_title">Choose a support profile</string>
+    <string name="select_device_description">Select the kernel and firmware profile to use for this installation.</string>
+    <string name="show_my_kernel_only">Show only my kernel</string>
+    <string name="no_matching_kernels">No profiles match this kernel.</string>
+    <string name="kernel_mismatch_title">Kernel mismatch</string>
+    <string name="kernel_mismatch_body">This phone uses kernel %1$s, but the selected profile targets %2$s. Running it may crash or damage the device.</string>
+    <string name="build_mismatch_title">Firmware mismatch</string>
+    <string name="build_mismatch_body">This phone uses build %1$s, but the selected profile targets %2$s. Offsets may be incompatible.</string>
+    <string name="debug_mode">Debug mode</string>
+    <string name="debug_mode_description">Disabled in this iQOO-only build; payloads are downloaded from the latest GitHub release.</string>
+    <string name="debug_payload_folder">Local payload folder</string>
+    <string name="debug_payload_folder_description">A folder holding %1$s, the app payload and ksud</string>
+    <string name="debug_payload_folder_unset">Not selected</string>
+    <string name="debug_local_payload_active">Local payload</string>
+    <string name="debug_local_payload_unverified">Read from this device, with none of the checks a downloaded payload gets</string>
+    <string name="status_reading_local">Reading the local payload</string>
+    <string name="status_local_failed">Local payload unusable</string>
+    <string name="log_local_source">[*] Feed bypassed: payload read from %1$s</string>
+    <string name="log_local_overrides">[*] Debug mode is on, so the local payload is used instead of profile %1$s</string>
+    <string name="log_local_ready">[+] Local payload ready</string>
+    <string name="local_no_folder">No local payload folder is selected</string>
+    <string name="local_manifest_field">The local payload manifest has no %1$s</string>
+    <string name="local_file_missing">The selected folder has no %1$s</string>
+    <string name="local_manifest_unparsable">%1$s does not hold a readable payload manifest</string>
+    <string name="local_device_mismatch">The local payload declares %1$s %2$s, but this device is %3$s</string>
+    <string name="local_copying">Copying %1$s</string>
+    <string name="local_copied">%1$s copied (%2$d bytes)</string>
+    <string name="local_unreadable">%1$s could not be read from the selected folder</string>
+    <string name="local_too_large">%1$s is larger than a payload can be</string>
+    <string name="local_empty">%1$s is empty</string>
+    <string name="local_not_elf">%1$s is not an ELF binary</string>
+    <string name="payload_local">Read from a local folder, so there is no release to check</string>
+    <string name="action_reload_local">Re-read</string>
+    <string name="install_confirm_body_local">Debug mode is on: the exploit and KernelSU payload are read from %1$s on this device, not downloaded.</string>
+</resources>

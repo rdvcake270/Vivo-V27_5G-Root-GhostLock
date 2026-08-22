@@ -1,0 +1,43 @@
+# Gradle and Android build output
+.gradle/
+**/build/
+**/.cxx/
+**/.externalNativeBuild/
+.kotlin/
+local.properties
+captures/
+
+# Keep the three ready-to-run iQOO payload binaries and verified ksud artifact.
+!payload/build/
+!payload/build/cve-2026-43499
+!payload/build/cve-2026-43499-app.so
+!payload/build/cve-2026-43499-root
+
+# IDE and editor files
+.idea/
+.vscode/
+*.iml
+*.swp
+*.swo
+*~
+
+# Operating-system files
+.DS_Store
+Thumbs.db
+
+# Generated diagnostics and local run output
+*.log
+run*.txt
+
+# APKs are release artifacts, not source files
+*.apk
+*.aab
+
+# Private signing material and credentials
+*.jks
+*.keystore
+*.p12
+*.pfx
+app/release-signing.txt
+
+# The APK downloads runtime payloads from GitHub during installation.
