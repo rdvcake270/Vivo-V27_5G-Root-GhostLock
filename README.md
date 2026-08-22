@@ -1,6 +1,6 @@
 # iQOO Z9 5G Jailbreak Root (GhostLock)
 
-[![Installed KernelSU](installed_ksu.jpg)](installed_ksu.jpg)
+[Installed KernelSU](installed_ksu.jpg)
 
 An iQOO Z9 5G-only jailbreak/root Android application/payloads. The target is the iQOO Z9 5G with MediaTek
 Dimensity 7200 (MT6886).
