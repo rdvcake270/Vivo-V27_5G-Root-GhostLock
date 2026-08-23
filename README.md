@@ -1,22 +1,22 @@
-# iQOO Z9 5G Jailbreak Root (GhostLock)
+# iQOO Z9 5G / vivo T3 5G Jailbreak Root (GhostLock)
 
 [Installed KernelSU](installed_ksu.jpg)
 
-An iQOO Z9 5G-only jailbreak/root Android application/payloads. The target is the iQOO Z9 5G with MediaTek
-Dimensity 7200 (MT6886).
+An iQOO Z9 5G and vivo T3 5G jailbreak/root Android application and
+payloads. Both devices use the MediaTek Dimensity 7200 (MT6886) platform.
 
 There are two supported run methods: the Android APK with Shizuku, or the
 native helper run directly from an `adb shell`. Both methods use the same
-iQOO-specific payload and KernelSU daemon.
+device-specific payload and KernelSU daemon.
 
 ## CVE and scope
 
 This port uses the CVE-2026-43499 Ghostlock kernel exploit chain to obtain temporary
 bootstrap root, then late-loads the matching KernelSU daemon. It is a
-device-specific jailbreak/root research build for the iQOO Z9 5G (MT6886,
-model I2302) and kernel `5.15.178-android13-8-g0ebe6a5da65d`. It is not a
-general Android rooting tool and must only be used on hardware you own or are
-authorized to test.
+device-specific jailbreak/root research build for the iQOO Z9 5G (model I2302)
+and vivo T3 5G (model V2334), using kernel
+`5.15.178-android13-8-g0ebe6a5da65d`. It is not a general Android rooting tool
+and must only be used on hardware you own or are authorized to test.
 
 For instructions on adapting this project to another device, see the
 [Port to another device](#porting-guide) guide.
@@ -39,9 +39,9 @@ payload/   iQOO exploit source, target profile, build script, and release inputs
 
 The runtime flow is:
 
-1. The app verifies the phone model is `I2302`, the running kernel is
+1. The app verifies the phone model is `I2302` or `V2334`, the running kernel is
    `5.15.178-android13-8-g0ebe6a5da65d`, and the device is arm64.
-2. During installation it downloads the exact iQOO exploit and KernelSU
+2. During installation it downloads the exact exploit and KernelSU
    artifacts from the latest GitHub payload release(Storing files locally in apk is causing a crash because of the system's security features.).
 3. Shizuku is required: it starts the native helper compiled from
    `payload/src/su_daemon.c` as the shell service (UID 2000), which is the
@@ -183,10 +183,11 @@ checkout.
 
 This is a highly device-specific port. The exploit offsets, PAC/KASLR logic,
 stack geometry, kernel ABI, module metadata, and KernelSU daemon all match the
-tested iQOO Z9 5G kernel above. The binaries should not be expected to work on
-another model, firmware, kernel release, or materially different build; they
-may abort, freeze, or panic an incompatible device. A different device needs
-its own target profile, source audit, and hardware validation.
+tested iQOO Z9 5G (I2302) and vivo T3 5G (V2334) devices with the kernel above.
+The binaries should not be expected to work on another model, firmware, kernel
+release, or materially different build; they may abort, freeze, or panic an
+incompatible device. A different device needs its own target profile, source
+audit, and hardware validation.
 
 KernelSU is late-loaded once per boot and is not a persistent boot-image
 modification. Follow the runbook in the original port documentation when
@@ -196,11 +197,12 @@ Use only on hardware that you own or are explicitly authorized to test.
 
 ## Porting guide
 
-This source is for the iQOO Z9 5G and its kernel family. For another device in
-the same kernel family, use it as a starting point and replace the
-device-specific values after validating them on that device. For a different
-kernel family such as 5.10 or 6.x, first find a matching public source,
-exploit port, or reference on GitHub and adapt the profile for that kernel.
+This source currently supports the iQOO Z9 5G (I2302) and vivo T3 5G (V2334)
+with the listed kernel family. For another device in the same kernel family,
+use it as a starting point and replace the device-specific values after
+validating them on that device. For a different kernel family such as 5.10 or
+6.x, first find a matching public source, exploit port, or reference on GitHub
+and adapt the profile for that kernel.
 
 You will need the device's exact `boot.img` and matching kernel source tree.
 AI coding agents can help inspect those files, prepare the build, and update

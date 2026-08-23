@@ -1,10 +1,11 @@
-# iQOO Z9 5G Jailbreak Root payload
+# iQOO Z9 5G / vivo T3 5G Jailbreak Root payload
 
 This directory contains the only native CVE-2026-43499 jailbreak/root payload
-source used by the iQOO-only APK. It targets one device and one kernel:
+source used by the iQOO/Vivo APK. It targets the following device models and
+one kernel:
 
 ```text
-device: iQOO Z9 5G (MediaTek Dimensity 7200 / MT6886), model I2302
+device: iQOO Z9 5G (MT6886), model I2302; vivo T3 5G (MT6886), model V2334
 kernel: 5.15.178-android13-8-g0ebe6a5da65d
 writer: SIGRETURN (STACK_WRITER=2)
 abi:    arm64-v8a
@@ -13,7 +14,7 @@ abi:    arm64-v8a
 The payload obtains temporary bootstrap root with the CVE-2026-43499 chain;
 the app then late-loads the matching KernelSU daemon. This is not a portable
 Android root implementation: the offsets, kernel ABI, and module metadata are
-specific to this iQOO Z9 5G build.
+specific to these iQOO Z9 5G and vivo T3 5G builds.
 
 ## Layout
 
@@ -89,5 +90,5 @@ adb shell '/data/local/tmp/cve-2026-43499-root --late-load'
 ```
 
 Do not retry on the same boot after `stack writer ran; refusing retry on this
-boot`. The payload and binaries are specific to the iQOO Z9 5G I2302 and its
-listed kernel.
+boot`. The payload and binaries are specific to the iQOO Z9 5G I2302 and vivo
+T3 5G V2334 with the listed kernel.

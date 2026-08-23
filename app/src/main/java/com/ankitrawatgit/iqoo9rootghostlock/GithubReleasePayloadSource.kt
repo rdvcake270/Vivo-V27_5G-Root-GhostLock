@@ -9,11 +9,11 @@ import java.net.HttpURLConnection
 import java.net.URL
 import org.json.JSONObject
 
-/** Downloads the exact iQOO payload pair from the latest GitHub release. */
+/** Downloads the exact supported-device payload pair from the latest GitHub release. */
 class GithubReleasePayloadSource(private val context: Context) {
     fun resolve(snapshot: DeviceSnapshot): ResolvedTarget {
-        require(snapshot.model.equals(EXPECTED_MODEL, ignoreCase = true)) {
-            "Unsupported model: ${snapshot.model}; expected $EXPECTED_MODEL"
+        require(SUPPORTED_MODELS.any { it.equals(snapshot.model, ignoreCase = true) }) {
+            "Unsupported model: ${snapshot.model}; expected one of ${SUPPORTED_MODELS.joinToString()}"
         }
         require(snapshot.kernelRelease == KERNEL_RELEASE) {
             "Unsupported kernel: ${snapshot.kernelRelease}; expected $KERNEL_RELEASE"
@@ -203,7 +203,7 @@ class GithubReleasePayloadSource(private val context: Context) {
 
     companion object {
         const val PROFILE_ID = "iqoo-z9-5g"
-        const val EXPECTED_MODEL = "I2302"
+        private val SUPPORTED_MODELS = setOf("I2302", "V2334")
         const val KERNEL_RELEASE = "5.15.178-android13-8-g0ebe6a5da65d"
         private const val RELEASE_API_URL =
             "https://api.github.com/repos/ankitrawatgit/iQOO-Z9_5G-Root-GhostLock/releases/latest"
