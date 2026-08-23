@@ -206,9 +206,9 @@ class GithubReleasePayloadSource(private val context: Context) {
         private val SUPPORTED_MODELS = setOf("I2302", "V2334")
         const val KERNEL_RELEASE = "5.15.178-android13-8-g0ebe6a5da65d"
         private const val RELEASE_API_URL =
-            "https://api.github.com/repos/ankitrawatgit/iQOO-Z9_5G-Root-GhostLock/releases/latest"
+            "https://api.github.com/repos/ankitrawatgit/iQOO-Z9_5G-vivo-T3_5G-Root-GhostLock/releases/latest"
         private const val RELEASE_DOWNLOAD_BASE =
-            "https://github.com/ankitrawatgit/iQOO-Z9_5G-Root-GhostLock/releases/download"
+            "https://github.com/ankitrawatgit/iQOO-Z9_5G-vivo-T3_5G-Root-GhostLock/releases/download"
         private const val EXPLOIT_SUFFIX = "-app.so"
         private const val KSUD_SUFFIX = "-ksud"
         private const val MAX_RELEASE_RESPONSE_BYTES = 128 * 1024

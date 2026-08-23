@@ -62,7 +62,7 @@ The runtime flow is:
 > **Important recovery note:** If the phone becomes stuck or does not boot,
 > hold **Volume Down + Power** together until it force-restarts.
 
-Download the latest APK from the [GitHub Releases](https://github.com/ankitrawatgit/iQOO-Z9_5G-Root-GhostLock/releases) page.
+Download the latest APK from the [GitHub Releases](https://github.com/ankitrawatgit/iQOO-Z9_5G-vivo-T3_5G-Root-GhostLock/releases) page.
 
 Download the official [KernelSU Manager APK](https://github.com/tiann/KernelSU/releases)
 from the KernelSU releases page.
