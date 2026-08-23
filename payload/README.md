@@ -11,6 +11,11 @@ writer: SIGRETURN (STACK_WRITER=2)
 abi:    arm64-v8a
 ```
 
+The I2302 and V2334 are the same target for this payload: the SoC, firmware
+behavior, kernel release, ABI, exploit offsets, and KernelSU pairing are the
+same. The build fingerprint is the expected identity difference, so both
+models use the same payload and target profile.
+
 The payload obtains temporary bootstrap root with the CVE-2026-43499 chain;
 the app then late-loads the matching KernelSU daemon. This is not a portable
 Android root implementation: the offsets, kernel ABI, and module metadata are

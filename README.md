@@ -18,6 +18,13 @@ and vivo T3 5G (model V2334), using kernel
 `5.15.178-android13-8-g0ebe6a5da65d`. It is not a general Android rooting tool
 and must only be used on hardware you own or are authorized to test.
 
+The iQOO Z9 5G I2302 and vivo T3 5G V2334 are treated as the same target for
+this port. Their SoC, firmware behavior, kernel release, ABI, exploit offsets,
+and KernelSU pairing are the same; the build fingerprint is the expected
+identity difference. They therefore use the same payload and support profile.
+The app still requires the exact kernel release listed above:
+`5.15.178-android13-8-g0ebe6a5da65d`.
+
 For instructions on adapting this project to another device, see the
 [Port to another device](#porting-guide) guide.
 
