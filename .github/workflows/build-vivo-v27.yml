@@ -11,13 +11,19 @@ on:
       - '.github/workflows/build-vivo-v27.yml'
       - 'payload/**'
   workflow_dispatch:
+    inputs:
+      publish:
+        description: 'Publish a GitHub release'
+        type: boolean
+        required: true
+        default: false
 
 jobs:
   build-payload:
     name: Build Vivo V27 native payload
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
 
     steps:
       - name: Checkout
@@ -29,6 +35,9 @@ jobs:
           yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses > /dev/null
           "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" "ndk;$ndk_version" > /dev/null
           echo "ANDROID_NDK_HOME=$ANDROID_HOME/ndk/$ndk_version" >> "$GITHUB_ENV"
+
+      - name: Set release tag
+        run: echo "RELEASE_TAG=vivo-v27-payload-${GITHUB_RUN_ID}" >> "$GITHUB_ENV"
 
       - name: Build payload
         run: |
@@ -55,4 +64,18 @@ jobs:
             payload/build/cve-2026-43499
             payload/build/cve-2026-43499-app.so
             payload/build/cve-2026-43499-root
+            payload/artifacts/ksud-iqoo-z9-5g
           if-no-files-found: error
+
+      - name: Publish GitHub release
+        if: github.event_name == 'workflow_dispatch' && inputs.publish == true
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ env.RELEASE_TAG }}
+          name: Vivo V27 payload ${{ env.RELEASE_TAG }}
+          generate_release_notes: true
+          files: |
+            payload/build/cve-2026-43499
+            payload/build/cve-2026-43499-app.so
+            payload/build/cve-2026-43499-root
+            payload/artifacts/ksud-iqoo-z9-5g
