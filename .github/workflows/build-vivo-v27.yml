@@ -41,8 +41,8 @@ jobs:
 
       - name: Install SDK components
         run: |
-          ndk=$(grep -oP 'ndkVersion\\s*=\\s*"\\K[^"]+' app/build.gradle.kts)
-          cmake=$(grep -oP 'version\\s*=\\s*"\\K[0-9.]+' app/build.gradle.kts | head -1)
+          ndk=$(grep -oP 'ndkVersion\s*=\s*"\K[^"]+' app/build.gradle.kts)
+          cmake=$(grep -oP 'version\s*=\s*"\K[0-9.]+' app/build.gradle.kts | head -1)
           echo "ndk=$ndk cmake=$cmake"
           yes | "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --licenses > /dev/null
           "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" \
@@ -51,7 +51,7 @@ jobs:
       - name: Set environment
         run: |
           {
-            app_version=$(grep -oP 'versionName\\s*=\\s*"\\K[^"]+' app/build.gradle.kts)
+            app_version=$(grep -oP 'versionName\s*=\s*"\K[^"]+' app/build.gradle.kts)
             echo "version=v${app_version}-vivo-v27-build.${GITHUB_RUN_ID}.${GITHUB_RUN_ATTEMPT}"
             echo "commit=$(echo ${{ github.sha }} | cut -c-7)"
             echo "repo=${GITHUB_REPOSITORY#${GITHUB_REPOSITORY_OWNER}/}"
@@ -84,7 +84,7 @@ jobs:
           KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
           KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
         run: |
-          ndk=$(grep -oP 'ndkVersion\\s*=\\s*"\\K[^"]+' app/build.gradle.kts)
+          ndk=$(grep -oP 'ndkVersion\s*=\s*"\K[^"]+' app/build.gradle.kts)
           if [ "${{ github.event.inputs.release }}" = "true" ]; then
             make -C payload TARGET=vivo-v27-5g ANDROID_NDK_HOME="$ANDROID_HOME/ndk/$ndk" all
             printf '%s' "$STORE_FILE" | base64 -d > app/release.jks
