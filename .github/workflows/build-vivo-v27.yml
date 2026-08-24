@@ -68,10 +68,8 @@ jobs:
             echo "::error::release requires STORE_FILE, STORE_PASSWORD, KEY_ALIAS, and KEY_PASSWORD secrets"
             exit 1
           fi
-          if [ ! -s "payload/artifacts/ksud-vivo-v27-5g" ]; then
-            echo "::error::missing payload/artifacts/ksud-vivo-v27-5g"
-            echo "A Vivo V27-specific verified ksud artifact is required for a release."
-            echo "The repository currently contains only ksud-iqoo-z9-5g."
+          if [ ! -s "payload/artifacts/ksud-iqoo-z9-5g" ]; then
+            echo "::error::missing payload/artifacts/ksud-iqoo-z9-5g"
             exit 1
           fi
           if gh api "repos/$GITHUB_REPOSITORY/git/ref/tags/${{ env.version }}" >/dev/null 2>&1; then
@@ -100,7 +98,7 @@ jobs:
               "release-assets/${{ env.repo }}-${{ env.version }}-root"
             cp -f payload/build/cve-2026-43499 \
               "release-assets/${{ env.repo }}-${{ env.version }}-preload"
-            cp -f payload/artifacts/ksud-vivo-v27-5g \
+            cp -f payload/artifacts/ksud-iqoo-z9-5g \
               "release-assets/${{ env.repo }}-${{ env.version }}-ksud"
           else
             make -C payload TARGET=vivo-v27-5g ANDROID_NDK_HOME="$ANDROID_HOME/ndk/$ndk" payload
