@@ -11,7 +11,7 @@ writer: SIGRETURN (STACK_WRITER=2)
 abi:    arm64-v8a
 ```
 
-The I2302 and V2334 are the same target for this payload: the SoC, firmware
+The V2231 and V2231 are the same target for this payload: the SoC, firmware
 behavior, kernel release, ABI, exploit offsets, and KernelSU pairing are the
 same. The build fingerprint is the expected identity difference, so both
 models use the same payload and target profile.
@@ -95,5 +95,5 @@ adb shell '/data/local/tmp/cve-2026-43499-root --late-load'
 ```
 
 Do not retry on the same boot after `stack writer ran; refusing retry on this
-boot`. The payload and binaries are specific to the iQOO Z9 5G I2302 and vivo
-T3 5G V2334 with the listed kernel.
+boot`. The payload and binaries are specific to the Vivo V27 Z9 5G V2231 and vivo
+T3 5G V2231 with the listed kernel.
