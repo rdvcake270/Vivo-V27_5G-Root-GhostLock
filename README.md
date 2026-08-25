@@ -2,7 +2,7 @@
 
 [Installed KernelSU](installed_ksu.jpg)
 
-An iQOO Z9 5G and vivo T3 5G jailbreak/root Android application and
+An vivo V27 5G jailbreak/root Android application and
 payloads. Both devices use the MediaTek Dimensity 7200 (MT6886) platform.
 
 There are two supported run methods: the Android APK with Shizuku, or the
@@ -13,17 +13,16 @@ device-specific payload and KernelSU daemon.
 
 This port uses the CVE-2026-43499 Ghostlock kernel exploit chain to obtain temporary
 bootstrap root, then late-loads the matching KernelSU daemon. It is a
-device-specific jailbreak/root research build for the iQOO Z9 5G (model I2302)
-and vivo T3 5G (model V2334), using kernel
-`5.15.178-android13-8-g0ebe6a5da65d`. It is not a general Android rooting tool
+device-specific jailbreak/root research build for the vivo V27 5G (model V2231), using kernel
+`5.15.178-android13-8-00007-g362d545d31a5-ab14608873`. It is not a general Android rooting tool
 and must only be used on hardware you own or are authorized to test.
 
-The iQOO Z9 5G I2302 and vivo T3 5G V2334 are treated as the same target for
+The vivo V27 5G are treated as the same target for
 this port. Their SoC, firmware behavior, kernel release, ABI, exploit offsets,
 and KernelSU pairing are the same; the build fingerprint is the expected
 identity difference. They therefore use the same payload and support profile.
 The app still requires the exact kernel release listed above:
-`5.15.178-android13-8-g0ebe6a5da65d`.
+`5.15.178-android13-8-00007-g362d545d31a5-ab14608873`.
 
 For instructions on adapting this project to another device, see the
 [Port to another device](#porting-guide) guide.
@@ -46,8 +45,8 @@ payload/   iQOO exploit source, target profile, build script, and release inputs
 
 The runtime flow is:
 
-1. The app verifies the phone model is `I2302` or `V2334`, the running kernel is
-   `5.15.178-android13-8-g0ebe6a5da65d`, and the device is arm64.
+1. The app verifies the phone model is or `V2231`, the running kernel is
+   `5.15.178-android13-8-00007-g362d545d31a5-ab14608873`, and the device is arm64.
 2. During installation it downloads the exact exploit and KernelSU
    artifacts from the latest GitHub payload release(Storing files locally in apk is causing a crash because of the system's security features.).
 3. Shizuku is required: it starts the native helper compiled from
@@ -128,11 +127,11 @@ adb push payload/build/cve-2026-43499-app.so \
 adb push payload/build/cve-2026-43499-root \
   /data/local/tmp/cve-2026-43499-root
 adb push payload/artifacts/ksud-iqoo-z9-5g \
-  /data/local/tmp/ksud-iqoo-z9-5g
+  /data/local/tmp/ksud-vivo-v27-5g
 
 adb shell chmod 755 \
   /data/local/tmp/cve-2026-43499-root \
-  /data/local/tmp/ksud-iqoo-z9-5g
+  /data/local/tmp/ksud-vivo-v27-5g
 adb shell rm -f /data/local/tmp/iqoo-app-run.log
 ```
 
@@ -190,7 +189,7 @@ checkout.
 
 This is a highly device-specific port. The exploit offsets, PAC/KASLR logic,
 stack geometry, kernel ABI, module metadata, and KernelSU daemon all match the
-tested iQOO Z9 5G (I2302) and vivo T3 5G (V2334) devices with the kernel above.
+tested vivo T3 5G (V2231) devices with the kernel above.
 The binaries should not be expected to work on another model, firmware, kernel
 release, or materially different build; they may abort, freeze, or panic an
 incompatible device. A different device needs its own target profile, source
@@ -204,7 +203,7 @@ Use only on hardware that you own or are explicitly authorized to test.
 
 ## Porting guide
 
-This source currently supports the iQOO Z9 5G (I2302) and vivo T3 5G (V2334)
+This source currently supports the vivo V27 5G (V2231)
 with the listed kernel family. For another device in the same kernel family,
 use it as a starting point and replace the device-specific values after
 validating them on that device. For a different kernel family such as 5.10 or
