@@ -62,7 +62,7 @@ class GithubReleasePayloadSource(private val context: Context) {
         )
         val kernelSu = downloadArtifact(
             target.profile.kernelSu.artifact,
-            File(directory, "ksud-iqoo-z9-5g"),
+            File(directory, "ksud-vivo-v27-5g"),
             context.getString(R.string.artifact_kernelsu),
             onProgress,
         )
