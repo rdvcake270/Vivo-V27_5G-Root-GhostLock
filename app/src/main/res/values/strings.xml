@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">iQOO Z9 5G / vivo T3 5G — GhostLock</string>
+    <string name="app_name">vivo V27 5G — GhostLock</string>
     <string name="nav_overview">Home</string>
     <string name="nav_history">History</string>
     <string name="nav_settings">Settings</string>
     <string name="install_confirm_title">Install KernelSU?</string>
-    <string name="install_confirm_body">The app will verify this iQOO Z9 5G (I2302) or vivo T3 5G (V2334), download the device-specific CVE-2026-43499 payload from GitHub, then load the matching KernelSU daemon.</string>
+    <string name="install_confirm_body">The app will verify this vivo V27 5G (V2231), download the device-specific CVE-2026-43499 payload from GitHub, then load the matching KernelSU daemon.</string>
     <string name="action_confirm">Confirm</string>
     <string name="action_cancel">Cancel</string>
     <string name="action_close">Close</string>
@@ -101,7 +101,7 @@
     <string name="step_ksu_detail">Late-load module and verify control channel</string>
     <string name="phase_checking">Checking the supported device and firmware</string>
     <string name="phase_ready">Ready to install</string>
-    <string name="phase_downloading">Downloading the iQOO payload from GitHub</string>
+    <string name="phase_downloading">Downloading the Vivo V27 payload from GitHub</string>
     <string name="phase_exploiting">This may take 10 minutes or longer. Your device may become hot or stop responding.</string>
     <string name="phase_loading_ksu">Loading KernelSU with the acquired bootstrap root</string>
     <string name="phase_installed">KernelSU module and control channel verified</string>
@@ -110,7 +110,7 @@
     <string name="status_ksu_active">KernelSU active</string>
     <string name="status_not_installed">Not installed</string>
     <string name="status_support_failed">Support check failed</string>
-    <string name="status_checking_github">Checking the iQOO payload release on GitHub</string>
+    <string name="status_checking_github">Checking the Vivo V27 payload release on GitHub</string>
     <string name="status_downloading_payload">Downloading payloads from GitHub</string>
     <string name="status_exploit_running">Running kernel exploit</string>
     <string name="status_ksu_loading">Late-loading KernelSU</string>
@@ -155,7 +155,7 @@
     <string name="repo_url_invalid">The artifact repository is not allowed</string>
     <string name="repo_response_too_large">The response exceeded its size limit</string>
     <string name="open_github">Open GitHub</string>
-    <string name="github_card_title">iQOO Z9 5G / vivo T3 5G Jailbreak Root source</string>
+    <string name="github_card_title">vivo V27 5G Jailbreak Root source</string>
     <string name="github_card_description">Device-specific CVE-2026-43499 port and KernelSU bootstrap.</string>
     <string name="action_continue">Continue anyway</string>
     <string name="action_next">Next</string>
