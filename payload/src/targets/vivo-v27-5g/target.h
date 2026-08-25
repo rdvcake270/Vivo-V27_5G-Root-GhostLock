@@ -172,7 +172,7 @@
 #define SLIDE_STACK_WRITER_MCAST 1
 #define SLIDE_STACK_WRITER_SIGRETURN 2
 #ifndef SLIDE_STACK_WRITER
-#error iqoo-z9-5g stack writer must be set by the build
+#error vivo-v27-5g stack writer must be set by the build
 #endif
 // Stack-depth convention: depth is measured down from the C syscall-entry
 // SP.  A local at sp+N is at (frame depth - N), not (frame depth + N).
@@ -204,7 +204,7 @@
 #define P0_ORACLE_GATE_OBJECT_INDEX 1
 #define P0_ORACLE_PROBE_OFFSET 0x1f0000ULL
 #define P0_FINGERPRINT_HEADER \
-  "targets/iqoo-z9-5g/p0_fingerprint.h"
+  "targets/vivo-v27-5g/p0_fingerprint.h"
 #endif
 
 #define KERNELSNITCH_IDENTITY_START 0xffffff8000000000ULL
