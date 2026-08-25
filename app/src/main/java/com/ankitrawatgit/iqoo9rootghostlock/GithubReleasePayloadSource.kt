@@ -202,9 +202,9 @@ class GithubReleasePayloadSource(private val context: Context) {
     )
 
     companion object {
-        const val PROFILE_ID = "iqoo-z9-5g"
-        private val SUPPORTED_MODELS = setOf("I2302", "V2334")
-        const val KERNEL_RELEASE = "5.15.178-android13-8-g0ebe6a5da65d"
+        const val PROFILE_ID = "vivo-v27-5g"
+        private val SUPPORTED_MODELS = setOf("V2231")
+        const val KERNEL_RELEASE = "5.15.178-android13-8-00007-g362d545d31a5-ab14608873"
         private const val RELEASE_API_URL =
             "https://api.github.com/repos/ankitrawatgit/iQOO-Z9_5G-vivo-T3_5G-Root-GhostLock/releases/latest"
         private const val RELEASE_DOWNLOAD_BASE =
