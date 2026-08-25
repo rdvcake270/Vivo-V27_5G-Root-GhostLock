@@ -64,7 +64,7 @@ jobs:
             payload/build/cve-2026-43499
             payload/build/cve-2026-43499-app.so
             payload/build/cve-2026-43499-root
-            payload/artifacts/ksud-iqoo-z9-5g
+            payload/artifacts/ksud-vivo-v27-5g
           if-no-files-found: error
 
       - name: Publish GitHub release
@@ -78,4 +78,4 @@ jobs:
             payload/build/cve-2026-43499
             payload/build/cve-2026-43499-app.so
             payload/build/cve-2026-43499-root
-            payload/artifacts/ksud-iqoo-z9-5g
+            payload/artifacts/ksud-vivo-v27-5g
