@@ -1,4 +1,4 @@
-# iQOO Z9 5G payload build
+# vivo V27 5G payload build
 #
 # The app payload is rebuilt from payload/src. The APK downloads the two
 # verified, exact-kernel artifacts from the GitHub release at install time.
@@ -6,7 +6,7 @@
 ANDROID_NDK_HOME ?= $(if $(ANDROID_NDK_ROOT),$(ANDROID_NDK_ROOT),$(if $(ANDROID_HOME),$(ANDROID_HOME)/ndk/28.2.13676358,))
 API ?= 35
 STACK_WRITER ?= 2
-TARGET ?= iqoo-z9-5g
+TARGET ?= vivo-v27-5g
 TARGET_DIR ?= targets/$(TARGET)
 TARGET_HEADER ?= $(TARGET_DIR)/target.h
 
@@ -47,7 +47,7 @@ TARGET_FILES := $(SRC_DIR)/$(TARGET_HEADER) $(SRC_DIR)/$(TARGET_DIR)/p0_fingerpr
 
 MKDIR_P = mkdir -p "$(BUILD_DIR)"
 CLEAN_DIR = rm -rf "$(BUILD_DIR)"
-VERIFY_ARTIFACT = test -s "$(ARTIFACTS_DIR)/ksud-iqoo-z9-5g" || (echo "missing verified ksud artifact" >&2; exit 1); shasum -a 256 "$(APP_PAYLOAD)" "$(ARTIFACTS_DIR)/ksud-iqoo-z9-5g"
+VERIFY_ARTIFACT = test -s "$(ARTIFACTS_DIR)/ksud-vivo-v27-5g" || (echo "missing verified ksud artifact" >&2; exit 1); shasum -a 256 "$(APP_PAYLOAD)" "$(ARTIFACTS_DIR)/ksud-vivo-v27-5g"
 
 .PHONY: all payload verify clean info
 
@@ -65,7 +65,7 @@ $(APP_PAYLOAD): $(APP_SRCS) $(TARGET_FILES) | $(BUILD_DIR)
 	$(CC) -DAPP_PAYLOAD=1 -DSLIDE_STACK_WRITER=$(STACK_WRITER) -fPIC $(COMMON_CFLAGS) $(APP_SRCS) -shared -pthread -o "$@"
 
 $(ROOT_HELPER): $(SRC_DIR)/su_daemon.c | $(BUILD_DIR)
-	$(CC) -DKSU_LOADER_PATH='"/data/local/tmp/ksud-iqoo-z9-5g"' -DKSU_LOADER_ALLOW_SHELL=1 -DKSU_LOADER_FOREGROUND=1 -fPIE -pie -O2 -g0 -Wall -Wextra "$<" -ldl -o "$@"
+	$(CC) -DKSU_LOADER_PATH='"/data/local/tmp/ksud-vivo-v27-5g"' -DKSU_LOADER_ALLOW_SHELL=1 -DKSU_LOADER_FOREGROUND=1 -fPIE -pie -O2 -g0 -Wall -Wextra "$<" -ldl -o "$@"
 
 verify: payload
 	$(VERIFY_ARTIFACT)
