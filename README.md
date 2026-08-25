@@ -1,4 +1,4 @@
-# iQOO Z9 5G / vivo T3 5G Jailbreak Root (GhostLock)
+# VIVO V27 Jailbreak TempRoot (GhostLock)
 
 [Installed KernelSU](installed_ksu.jpg)
 
