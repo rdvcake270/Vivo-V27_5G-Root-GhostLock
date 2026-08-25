@@ -1,8 +1,8 @@
 #ifndef OFFSET_H
 #define OFFSET_H
 
-// iQOO Z9 5G (MediaTek Dimensity 7200 / mt6886) port.
-// Device: vivo V2231T / V2231.
+// vivo V27 5G (MediaTek Dimensity 7200 / mt6886) port.
+// Device: vivo V2231.
 // Kernel: 5.15.178-android13-8-00007-g362d545d31a5-ab14608873.
 // The offsets below were checked against payload/kernel_raw.
 //
@@ -14,7 +14,7 @@
 //
 // The symbol offsets and struct layouts are specific to this image.
 //
-// NOT YET VERIFIED ON DEVICE for this V2231T build:
+// NOT YET VERIFIED ON DEVICE for this V2231 build:
 //   P0_PHYS_OFFSET 0x40000000 / P0_KERNEL_PHYS_LOAD 0x44000000 are the
 //   standard MediaTek values (DRAM base 0x40000000, lk kernel load 0x44000000).
 //   Confirm before/after the first run:
