@@ -206,9 +206,9 @@ class GithubReleasePayloadSource(private val context: Context) {
         private val SUPPORTED_MODELS = setOf("V2231")
         const val KERNEL_RELEASE = "5.15.178-android13-8-00007-g362d545d31a5-ab14608873"
         private const val RELEASE_API_URL =
-            "https://api.github.com/repos/ankitrawatgit/iQOO-Z9_5G-vivo-T3_5G-Root-GhostLock/releases/latest"
+            "https://api.github.com/repos/rdvcake270/Vivo-V27_5G-Root-GhostLock/releases/latest"
         private const val RELEASE_DOWNLOAD_BASE =
-            "https://github.com/ankitrawatgit/iQOO-Z9_5G-vivo-T3_5G-Root-GhostLock/releases/download"
+            "https://github.com/rdvcake270/Vivo-V27_5G-Root-GhostLock/releases/download"
         private const val EXPLOIT_SUFFIX = "-app.so"
         private const val KSUD_SUFFIX = "-ksud"
         private const val MAX_RELEASE_RESPONSE_BYTES = 128 * 1024
