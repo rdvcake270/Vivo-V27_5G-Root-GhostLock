@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">GhostLock — iQOO Z9 5G / vivo T3 5G</string><string name="nav_overview">ホーム</string><string name="nav_history">実行履歴</string><string name="nav_settings">設定</string>
+    <string name="app_name">GhostLock — vivo V27 5G</string><string name="nav_overview">ホーム</string><string name="nav_history">実行履歴</string><string name="nav_settings">設定</string>
     <string name="install_confirm_title">KernelSUをインストールしますか？</string><string name="install_confirm_body">対応プロファイルを確認し、exploitとKernelSU payloadをGitHubから取得して実行します。</string>
     <string name="action_confirm">確認</string><string name="action_cancel">キャンセル</string><string name="action_close">閉じる</string><string name="action_retry">再試行</string><string name="action_done">完了</string><string name="action_back">戻る</string><string name="action_delete">削除</string>
     <string name="install_ksu_running">KernelSUモジュールは動作中です</string><string name="kernelsu_manager_required">必要な KernelSU マネージャ</string><string name="kernelsu_manager_open">タップでダウンロードページを開く</string><string name="kernelsu_manager_custom_required">このビルド専用の KernelSU マネージャが必要です</string><string name="kernelsu_manager_custom_replace">公式版とは署名もパッケージ名も別で、このビルドは公式版を受け付けません。両方入れたままで構いません。</string><string name="install_tap_retry">タップして再試行</string><string name="install_tap_start">タップしてKernelSUをインストール</string>
