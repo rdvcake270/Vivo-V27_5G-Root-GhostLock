@@ -110,7 +110,7 @@ jobs:
               "release-assets/${{ env.repo }}-${{ env.version }}-root"
             cp -f payload/build/cve-2026-43499 \
               "release-assets/${{ env.repo }}-${{ env.version }}-preload"
-            cp -f payload/artifacts/ksud-iqoo-z9-5g \
+            cp -f payload/artifacts/ksud-vivo-v27-5g \
               "release-assets/${{ env.repo }}-${{ env.version }}-ksud"
           else
             make -C payload ANDROID_NDK_HOME="$ANDROID_HOME/ndk/$ndk" payload
