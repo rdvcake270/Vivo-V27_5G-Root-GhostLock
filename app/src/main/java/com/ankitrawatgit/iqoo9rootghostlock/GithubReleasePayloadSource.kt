@@ -190,7 +190,7 @@ class GithubReleasePayloadSource(private val context: Context) {
             readTimeout = 60_000
             instanceFollowRedirects = true
             setRequestProperty("Accept", "application/vnd.github+json")
-            setRequestProperty("User-Agent", "iQOOZ9GhostLock/${BuildConfig.VERSION_NAME}")
+            setRequestProperty("User-Agent", "VivoV27GhostLock/${BuildConfig.VERSION_NAME}")
             connect()
             require(responseCode == HttpURLConnection.HTTP_OK) { "HTTP $responseCode" }
         }
