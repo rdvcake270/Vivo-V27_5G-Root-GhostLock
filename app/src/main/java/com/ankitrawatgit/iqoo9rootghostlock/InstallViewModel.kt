@@ -357,10 +357,10 @@ class InstallViewModel(application: Application) : AndroidViewModel(application)
         } else {
             val source = shellQuote(payloads.kernelSu.absolutePath)
             val stageCommand =
-                "/system/bin/cp $source /data/local/tmp/ksud-iqoo-z9-5g && " +
+                "/system/bin/cp $source /data/local/tmp/ksud-vivo-v27-5g && " +
                     "/system/bin/cp $source /data/local/tmp/ksud && " +
                     "/system/bin/cp $source /data/local/tmp/.ksud-stage && " +
-                    "/system/bin/chmod 755 /data/local/tmp/ksud-iqoo-z9-5g /data/local/tmp/ksud /data/local/tmp/.ksud-stage"
+                    "/system/bin/chmod 755 /data/local/tmp/ksud-vivo-v27-5g /data/local/tmp/ksud /data/local/tmp/.ksud-stage"
             val stage = runHelper("-c", stageCommand)
             require(stage.code == 0) { app.getString(R.string.error_ksu_stage, stage.output) }
         }
@@ -644,7 +644,7 @@ class InstallViewModel(application: Application) : AndroidViewModel(application)
         private const val SHIZUKU_LOG_PATH = "/data/local/tmp/ghostlock-exploit.log"
         private const val SHIZUKU_HELPER_PATH = "/data/local/tmp/ghostlock-helper"
         private const val SHIZUKU_PAYLOAD_PATH = "/data/local/tmp/ghostlock-payload"
-        private const val SHIZUKU_KSUD_PATH = "/data/local/tmp/ksud-iqoo-z9-5g"
+        private const val SHIZUKU_KSUD_PATH = "/data/local/tmp/ksud-vivo-v27-5g"
         private const val SHIZUKU_KSUD_STAGE_PATH = "/data/local/tmp/.ksud-stage"
         private val LOG_POLL_INTERVAL = 250.milliseconds
         private val SHIZUKU_LOG_POLL_INTERVAL = 1.seconds
