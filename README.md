@@ -1,6 +1,6 @@
 # VIVO V27 Jailbreak TempRoot (GhostLock)
 
-[Installed KernelSU](installed_ksu.jpg)
+[Installed KernelSU](installed_ksu.jpeg)
 
 An vivo V27 5G jailbreak/root Android application and
 payloads. Both devices use the MediaTek Dimensity 7200 (MT6886) platform.
