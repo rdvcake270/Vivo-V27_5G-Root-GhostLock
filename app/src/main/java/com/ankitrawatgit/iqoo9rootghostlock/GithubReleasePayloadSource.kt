@@ -203,7 +203,7 @@ class GithubReleasePayloadSource(private val context: Context) {
 
     companion object {
         const val PROFILE_ID = "vivo-v27-5g"
-        private val SUPPORTED_MODELS = setOf("V2231")
+        private val SUPPORTED_MODELS = setOf("V2246", "V2231")
         const val KERNEL_RELEASE = "5.15.178-android13-8-00007-g362d545d31a5-ab14608873"
         private const val RELEASE_API_URL =
             "https://api.github.com/repos/rdvcake270/Vivo-V27_5G-Root-GhostLock/releases/latest"
